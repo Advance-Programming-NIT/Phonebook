@@ -55,6 +55,12 @@ public class Phonebook_Test {
         assertEquals("09234567891", person.getPhone());
 
     }
+    @Test
+    public void testSetHidden() {
+        Person person = new Person("John Doe", "09123456789");
+        person.setHidden();
+        assertTrue(person.isHidden());
+    }
 
 }
 
