@@ -70,8 +70,16 @@ public class Phonebook_Test {
     }
     @Test
     public void testToString() {
-        Person person = new Person("John Doe", "09123456789");
+        Person person   = new Person("John Doe", "09123456789");
         assertEquals("Name: John Doe - Phone number: 09123456789", person.toString());
     }
+    @Test
+    public void testAddContact() {
+        Phonebook phonebook = new Phonebook();
+        Person person = new Person("John Doe", "09123456789");
+        phonebook.addContact(person);
+        assertTrue(phonebook.getAllContacts().contains(person));
+    }
+
 }
 
