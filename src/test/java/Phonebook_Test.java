@@ -16,29 +16,45 @@ public class Phonebook_Test {
         assertEquals("09123456789", person.getPhone());
         assertFalse(person.isHidden());
     }
+
     @Test
     public void testGetName() {
         Person person = new Person("John Doe", "09123456789");
         assertEquals("John Doe", person.getName());
     }
+
     @Test
     public void testGetPhone() {
         Person person = new Person("John Doe", "09123456789");
         assertEquals("09123456789", person.getPhone());
     }
+
     @Test
     public void testGetId() {
         Person person = new Person("John Doe", "09123456789");
         assertEquals(1, person.getId());
     }
+
     @Test
     public void testIsHidden() {
         Person person = new Person("John Doe", "09123456789");
         assertFalse(person.isHidden());
     }
+
     @Test
     public void testSetName() {
         Person person = new Person("John Doe", "09123456789");
         person.setName("Jane Doe");
         assertEquals("Jane Doe", person.getName());
+    }
+
+    @Test
+    public void testSetPhone() {
+        Person person = new Person("John Doe", "09123456789");
+        person.setPhone("09234567891");
+        assertEquals("09234567891", person.getPhone());
+
+    }
+
 }
+
