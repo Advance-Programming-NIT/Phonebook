@@ -6,6 +6,16 @@
  * Hint: Your test coverage should be 100%
  * Attention:  We would check your commits and it will affect your score
  */
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 public class Phonebook_Test {
+    @Test
+    public void testConstructor() {
+        Person person = new Person("John Doe", "09123456789");
+        assertEquals("John Doe", person.getName());
+        assertEquals("09123456789", person.getPhone());
+        assertFalse(person.isHidden());
+    }
+
 
 }
