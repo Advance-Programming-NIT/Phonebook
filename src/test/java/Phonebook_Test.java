@@ -36,5 +36,9 @@ public class Phonebook_Test {
         Person person = new Person("John Doe", "09123456789");
         assertFalse(person.isHidden());
     }
-
+    @Test
+    public void testSetName() {
+        Person person = new Person("John Doe", "09123456789");
+        person.setName("Jane Doe");
+        assertEquals("Jane Doe", person.getName());
 }
