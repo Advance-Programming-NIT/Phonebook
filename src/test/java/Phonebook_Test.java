@@ -26,5 +26,11 @@ public class Phonebook_Test {
         Person person = new Person("John Doe", "09123456789");
         assertEquals("09123456789", person.getPhone());
     }
+    @Test
+    public void testGetId() {
+        Person person = new Person("John Doe", "09123456789");
+        assertEquals(1, person.getId());
+    }
+
 
 }
