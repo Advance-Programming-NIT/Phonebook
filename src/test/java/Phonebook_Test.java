@@ -80,6 +80,13 @@ public class Phonebook_Test {
         phonebook.addContact(person);
         assertTrue(phonebook.getAllContacts().contains(person));
     }
+    @Test
+    public void testGetPhoneNumber() {
+        Phonebook phonebook = new Phonebook();
+        Person person = new Person("John Doe", "09123456789");
+        phonebook.addContact(person);
+        assertEquals("09123456789", phonebook.getPhoneNumber("John Doe"));
+    }
 
 }
 
