@@ -137,6 +137,16 @@ public class Phonebook_Test {
         phonebook.setAllContactsHidden();
         assertTrue(person1.isHidden() && person2.isHidden());
     }
-
+    @Test
+    public void testSetAllContactsUnHidden() {
+        Phonebook phonebook = new Phonebook();
+        Person person1 = new Person("John Doe", "09123456789");
+        Person person2 = new Person("Jane Smith", "09234567890");
+        phonebook.addContact(person1);
+        phonebook.addContact(person2);
+        phonebook.setAllContactsHidden();
+        phonebook.setAllContactsUnHidden();
+        assertFalse(person1.isHidden() && person2.isHidden());
+    }
 }
 
