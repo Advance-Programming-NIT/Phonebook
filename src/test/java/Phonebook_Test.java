@@ -118,5 +118,15 @@ public class Phonebook_Test {
         assertEquals(1, phonebook.deleteContact("John Doe"));
         assertFalse(phonebook.getAllContacts().contains(person));
     }
+    @Test
+    public void testGetAllContacts() {
+        Phonebook phonebook = new Phonebook();
+        Person person1 = new Person("John Doe", "09123456789");
+        Person person2 = new Person("Jane Smith", "09234567890");
+        phonebook.addContact(person1);
+        phonebook.addContact(person2);
+        assertEquals(2, phonebook.getAllContacts().size());
+    }
+
 }
 
