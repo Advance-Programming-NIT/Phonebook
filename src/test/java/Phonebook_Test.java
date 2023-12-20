@@ -102,5 +102,14 @@ public class Phonebook_Test {
         assertEquals(1, phonebook.updateContactName("John Doe", "Jane Doe"));
         assertTrue(phonebook.getAllContacts().get(0).getName().equals("Jane Doe"));
     }
+    @Test
+    public void testUpdateContactPhoneNumber() {
+        Phonebook phonebook = new Phonebook();
+        Person person = new Person("John Doe", "09123456789");
+        phonebook.addContact(person);
+        assertEquals(1, phonebook.updateContactPhoneNumber("John Doe", "09234567890"));
+        assertTrue(phonebook.getAllContacts().get(0).getPhone().equals("09234567890"));
+    }
+
 }
 
