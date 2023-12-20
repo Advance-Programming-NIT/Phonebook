@@ -87,6 +87,12 @@ public class Phonebook_Test {
         phonebook.addContact(person);
         assertEquals("09123456789", phonebook.getPhoneNumber("John Doe"));
     }
-
+    @Test
+    public void testGetContact() {
+        Phonebook phonebook = new Phonebook();
+        Person person = new Person("John Doe", "09123456789");
+        phonebook.addContact(person);
+        assertEquals(1, phonebook.getContact("John Doe"));
+    }
 }
 
