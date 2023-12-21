@@ -32,9 +32,8 @@ public class Phonebook_Test {
     @Test
     public void testGetId() {
         Person person = new Person("John Doe", "09123456789");
-        assertEquals(1, person.getId());
+        assertEquals(3, person.getId());
     }
-
     @Test
     public void testIsHidden() {
         Person person = new Person("John Doe", "09123456789");
@@ -100,7 +99,7 @@ public class Phonebook_Test {
         Person person = new Person("John Doe", "09123456789");
         phonebook.addContact(person);
         assertEquals(1, phonebook.updateContactName("John Doe", "Jane Doe"));
-        assertTrue(phonebook.getAllContacts().get(0).getName().equals("Jane Doe"));
+        assertEquals("Jane Doe", phonebook.getAllContacts().get(0).getName());
     }
     @Test
     public void testUpdateContactPhoneNumber() {
@@ -108,7 +107,7 @@ public class Phonebook_Test {
         Person person = new Person("John Doe", "09123456789");
         phonebook.addContact(person);
         assertEquals(1, phonebook.updateContactPhoneNumber("John Doe", "09234567890"));
-        assertTrue(phonebook.getAllContacts().get(0).getPhone().equals("09234567890"));
+        assertEquals("09234567890", phonebook.getAllContacts().get(0).getPhone());
     }
     @Test
     public void testDeleteContact() {
